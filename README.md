@@ -15,9 +15,14 @@ Petit projet Python pour changer une adresse MAC sur une interface réseau Linux
 5. Mise hors ligne de l'interface, modification de l'adresse MAC, puis remise en ligne.
 6. Vérification de l'adresse MAC finale.
 
-## Usage
+## Usage Linux
 ```bash
 sudo python3 mac_changer.py --interface eth0 --mac 12:34:56:78:9A:BC
+```
+
+## Usage Windows
+```powershell
+python mac_changer_windows.py --interface "Ethernet" --mac 12:34:56:78:9A:BC
 ```
 
 ## Exemple
@@ -27,11 +32,12 @@ sudo python3 mac_changer.py -i wlan0 -m 00:11:22:33:44:55
 
 ## Prérequis
 - Python 3
-- Droits root (`sudo` sous Linux)
-- Commande `ip` disponible sur le système
+- Linux : droits root (`sudo`) et commande `ip`
+- Windows : exécuter dans un terminal administrateur et PowerShell disponible
 
 ## Fichiers
-- `mac_changer.py` : script principal
+- `mac_changer.py` : script principal pour Linux
+- `mac_changer_windows.py` : script Windows séparé
 - `.gitignore` : ignore les fichiers Python compilés et les environnements
 
 ## Explication du script
